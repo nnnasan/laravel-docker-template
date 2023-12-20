@@ -47,6 +47,7 @@ class TodoController extends Controller
 
     public function update(TodoRequest $request, $id)
     {
+        // all の返り値は連想配列
         $inputs = $request->all();
         $todo = $this->todo->find($id);
         $todo->fill($inputs);
