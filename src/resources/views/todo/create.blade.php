@@ -4,11 +4,11 @@
 <div class="row justify-content-center">
   <div class="col-md-8">
     @include('layouts.message')
-    {{ route('todo.store') }}
+    <!-- {{ dd(gettype(route('todo.store'))) }} -->
     <div class="card">
       <div class="card-header">ToDo作成</div>
       <div class="card-body">
-        <!-- todo.storeの中身は「指定された名前付きルートへのURL」です -->
+        <!-- todo.storeの中身は「指定された名前付きルートへのURL = string型」です -->
         <form method="POST" action="{{ route('todo.store') }}">
           @csrf
           <div class="form-group row">
